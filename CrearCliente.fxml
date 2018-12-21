@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="422.0" prefWidth="600.0" style="-fx-background-color: #3A9C7E;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto_final2.GestorCliente">
+   <children>
+      <Label text="Crear Cliente" textFill="WHITE" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Gadugi Bold" size="25.0" />
+         </font>
+      </Label>
+      <HBox layoutX="155.0" layoutY="150.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="63.0">
+         <children>
+            <VBox prefHeight="335.0" prefWidth="202.0" style="-fx-background-color: #C6DDC7;">
+               <children>
+                  <Label text="Tipo">
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="creaTipoCliente" onAction="#desplegarTipo" prefHeight="25.0" prefWidth="193.0">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Label text="Información de Contacto">
+                     <font>
+                        <Font name="Gadugi Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Cédula">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="creaIdContacto">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Nombre">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="creaNomContacto">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Primer Apellido">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="creaAUnoContacto">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Segundo Apellido">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="creaADosContacto">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Teléfono">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="creaTelefonoCliente">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Correo electrónico">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="creaEmailContacto">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="335.0" prefWidth="195.0" style="-fx-background-color: #C6DDC7;">
+               <children>
+                  <Label text="Ubicación">
+                     <font>
+                        <Font name="Gadugi Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="55.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Provincia">
+                     <VBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="creaProvCliente" onMouseClicked="#desplegarCanton" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets left="10.0" right="5.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Label text="Cantón">
+                     <VBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="creaCantCliente" onAction="#desplegarDistrito" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets left="10.0" right="5.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Label text="Distrito">
+                     <VBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="creaDistrCliente" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="335.0" prefWidth="177.0" style="-fx-background-color: #C6DDC7;">
+               <children>
+                  <Label text="Información de empresa">
+                     <font>
+                        <Font name="Gadugi Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" top="55.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Cédula Jurídica">
+                     <VBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="creaIdJuridico">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Nombre de empresa">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="creaNomJuridico">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="botonCreaCliente" mnemonicParsing="false" onAction="#crearCliente" style="-fx-background-color: #276955;" text="Crear Cliente" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="50.0" right="5.0" top="60.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

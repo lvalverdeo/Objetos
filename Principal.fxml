@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto_final2.GestorPrincipal">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+         <left>
+            <VBox prefHeight="303.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Menú">
+                     <font>
+                        <Font name="Gadugi Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="55.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="botonRegistrarCliente" mnemonicParsing="false" onAction="#handleGoToRegistroCliente" prefHeight="25.0" prefWidth="151.0" text="Registrar Cliente" />
+                  <Button fx:id="btnCreaProyecto" mnemonicParsing="false" onAction="#handleGoToCrearProyecto" prefHeight="25.0" prefWidth="151.0" text="Crear Proyecto" />
+                  <Button mnemonicParsing="false" onAction="#handleGoToAgregarTec" prefHeight="25.0" prefWidth="151.0" text="Agregar tecnología" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" text="Registrar Actividad" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" text="Ingresar Registro" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" text="Configuración de usuario" />
+                  <Button mnemonicParsing="false" text="Salir">
+                     <VBox.margin>
+                        <Insets left="55.0" top="60.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox style="-fx-background-color: #276955;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="97.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Logo_ProyectoBitacora.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="labelBitacora" text="Bitácora" textFill="WHITE">
+                     <font>
+                        <Font name="Gadugi Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="150.0" top="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="bitacora" onMouseClicked="#desplegarBitacora" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="50.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <TableView fx:id="tablaActividades" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="columnaFecha" prefWidth="75.0" text="Fecha" />
+                <TableColumn fx:id="columnaHora" prefWidth="75.0" text="Hora" />
+                  <TableColumn fx:id="columnaActividad" prefWidth="75.0" text="Actividad" />
+                  <TableColumn fx:id="columnaDescripcion" prefWidth="75.0" text="Descripción" />
+                  <TableColumn prefWidth="75.0" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

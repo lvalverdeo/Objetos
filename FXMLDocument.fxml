@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="proyecto_final2.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <ChoiceBox layoutX="-227.0" layoutY="30.0" prefWidth="150.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="113.0">
+         <children>
+            <Button layoutY="36.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="113.0" text="Abrir ventana" />
+            <Button layoutY="68.0" mnemonicParsing="false" onAction="#handleSalir" prefHeight="32.0" prefWidth="113.0" text="Salir" />
+            <Button layoutY="4.0" mnemonicParsing="false" onAction="#handlePrueba" prefHeight="32.0" prefWidth="113.0" text="Imprimir algo" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="115.0" prefHeight="200.0" prefWidth="205.0" />
+    </children>
+</AnchorPane>
